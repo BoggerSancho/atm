@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{block.super}} - Details {% endblock %}
+
+{% block content %}
+
+    <div class="row input-field">
+        <h3>Error:</h3>
+        <p>{{message}}</p>
+    </div>
+
+    <div class="row control-row">
+        <a href="{% url 'logout' %}"><button disabled class="btn btn-info" value="">Exit</button></a>
+        <a href="{{request.META.HTTP_REFERER}}"><button class="btn btn-info" value="">BACK</button></a>
+        <a href="{% url 'cards:withdrawal' %}"><button disabled class="btn btn-info" disabled value="">Cash</button></a>
+    </div>
+
+{% endblock %}
+
+{% block script %}
+{% endblock %}

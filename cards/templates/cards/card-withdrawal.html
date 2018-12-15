@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{block.super}} - Card Withdrawal{% endblock %}
+
+{% block content %}
+
+    <div class="row input-field">
+        <h3>Input cash amount:</h3>
+        <div ><input disabled id="card-cash-input" class="align-center" type="text" /></div>
+        <br/>
+    </div>
+
+    <div class="row control-row">
+        <a href="{% url 'logout' %}"><button class="btn btn-info" value="">Exit</button></a>
+        <button disabled class="btn" value="">Balance</button>
+        <button disabled class="btn" value="">Cash</button>
+    </div>
+    {% include 'keyboard.html' with action='/card/withdrawal/' %}
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'js/card_cash_validator.js' %}"></script>
+{% endblock %}

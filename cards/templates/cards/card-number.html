@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}{{block.super}} - Input Card Number{% endblock %}
+
+{% block content %}
+
+    <div class="row input-field">
+        <h3>Input card number:</h3>
+        <div ><input disabled id="card-num-input" class="align-center" type="text" /></div>
+        <br/>
+    </div>
+
+    <div class="row control-row">
+        <a href="{% url 'logout' %}"><button disabled class="btn btn-info" value="">Exit</button></a>
+        <button disabled class="btn" value="">Balance</button>
+        <button disabled class="btn" value="">Cash</button>
+    </div>
+    {% include 'keyboard.html' with action='/card/num/' %}
+{% endblock %}
+
+{% block script %}
+    <script src="{% static 'js/functions.js' %}"></script>
+    <script src="{% static 'js/card_num_validator.js' %}"></script>
+{% endblock %}

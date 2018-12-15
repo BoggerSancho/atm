@@ -1,0 +1,45 @@
+body {
+  background:#FCFCFC;
+}
+
+.align-left {
+    text-align: left;
+}
+
+.align-center {
+    text-align: center;
+}
+
+#card-num-input, #card-pass-input {
+  font-size: 25px;
+}
+
+#card-cash-input {
+    text-align: right;
+}
+
+button {
+  width: 62px;
+  margin: 2px;
+}
+
+.control-row button{
+  width: 70px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+
+}
+
+.confirm-form{
+    display: inline;
+}
+
+.container-alert-flash {
+	position: absolute;
+    top: 10px;
+    z-index: 50000;
+    width: 100%;
+    right: 0%;
+    margin: 0px;
+    display:none;
+}

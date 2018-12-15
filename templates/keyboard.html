@@ -1,0 +1,25 @@
+<div class="row">
+    <button class="btn btn-default btn-ctrl" value="7">7</button>
+    <button class="btn btn-default btn-ctrl" value="8">8</button>
+    <button class="btn btn-default btn-ctrl" value="9">9</button>
+</div>
+<div class="row">
+    <button class="btn btn-default btn-ctrl" value="4">4</button>
+    <button class="btn btn-default btn-ctrl" value="5">5</button>
+    <button class="btn btn-default btn-ctrl" value="6">6</button>
+</div>
+<div class="row">
+    <button class="btn btn-default btn-ctrl" value="1">1</button>
+    <button class="btn btn-default btn-ctrl" value="2">2</button>
+    <button class="btn btn-default btn-ctrl" value="3">3</button>
+</div>
+<div class="row">
+    <button class="btn btn-warning btn-ctrl" value="C">C</button>
+    <button class="btn btn-default btn-ctrl" value="0">0</button>
+    <form class="confirm-form" method="POST" action="{{action}}">{% csrf_token %}
+        <input type="hidden" name="card" id="card-num" value="">
+        <input type="hidden" name="pass" id="card-pass" value="">
+        <input type="hidden" name="cash" id="card-cash" value="">
+        <button class="btn btn-success btn-ctrl" value="Enter">Enter</button>
+    </form>
+</div>
